@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple">
+
+
+    <ImageButton
+        android:id="@+id/button_sheet_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        android:src="@drawable/ic_baseline_remove_24"
+        android:scaleY="2"
+        android:scaleX="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        />
+
+    <TextView
+        android:id="@+id/bottom_sheet_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Customer name"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_sheet_line" />
+
+    <TextView
+        android:id="@+id/bottom_sheet_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="date :"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_name" />
+
+    <TextView
+        android:id="@+id/bottom_sheet_dateOfArrive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/bottom_sheet_date"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_name" />
+
+    <TextView
+        android:id="@+id/bottom_sheet_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Call"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:drawableTint="@color/green"
+        android:drawablePadding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_date"/>
+
+    <TextView
+        android:id="@+id/bottom_sheet_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_baseline_message_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="#33A4FF"
+        android:text="Message"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_marginStart="40dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_call" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel_button_bottomSheet"
+        android:layout_width="1in"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/view_text_edit_background"
+        android:text="Cancel the order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_message" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/confirm_button_bottomSheet"
+        android:layout_width="1in"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/view_text_edit_background"
+        android:text="Confirm at location "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_message" />
+    <ProgressBar
+        android:id="@+id/progressBar_bottomSheet"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/button_sheet_line"
+        android:indeterminateDrawable="@drawable/progress_bar_circle"
+
+
+        />
+
+    <TextView
+        android:id="@+id/noOrder_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="You have no order !"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_sheet_line" />
+
+    <View
+        android:id="@+id/line_view_bottomSheet"
+        android:layout_width="1.9in"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+
+        app:layout_constraintTop_toBottomOf="@+id/cancel_button_bottomSheet" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

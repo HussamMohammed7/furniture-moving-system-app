@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple"
+    tools:context=".Order_frag">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/order_available_order_frag"
+        android:layout_width="201dp"
+        android:layout_height="48dp"
+        android:layout_weight="2"
+        android:background="@drawable/two_button"
+        android:text="Orders Available"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/history_order_frag"
+        android:layout_width="211dp"
+        android:layout_height="48dp"
+        android:background="@drawable/two_button"
+        android:text="Orders History"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/order_available_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Available"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view_order"
+        android:layout_width="match_parent"
+        android:layout_height="585dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_available_text"
+        tools:listitem="@layout/list_adapter" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

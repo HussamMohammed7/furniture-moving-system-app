@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Senior_Project2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="number_of_floor">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+
+
+    </string-array>
+    <string name="title_activity_place_order_map">PlaceOrderMap</string>
+    <string name="title_activity_view_order">ViewOrderActivity</string>
+</resources>

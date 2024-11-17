@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        tools:context=".MainActivitys.order.PlaceOrder">
+
+
+        <TextView
+            android:id="@+id/customerName_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Hussam order"
+            android:textColor="@color/purple"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.06" />
+
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/order_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customerName_text"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Order_Details_text"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Order Details"
+                    android:textSize="25dp"
+                    android:textColor="@color/redText"
+                    android:gravity="center"
+
+
+                    />
+                <View
+                    android:id="@+id/ID_line1"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/Order_Details_text" />
+
+                <TextView
+                    android:id="@+id/pick_up_floors_Text"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:text="Pick up floor"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line1"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <TextView
+                    android:id="@+id/pick_up_floors_Text_number"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line1"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <View
+                    android:id="@+id/ID_line2"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/pick_up_floors_Text" />
+                <TextView
+                    android:id="@+id/pick_up_elevator_Text"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:text="Pick up Elevator"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line2"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <TextView
+                    android:id="@+id/pick_up_floors_Text_condition"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="19dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line2"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <View
+                    android:id="@+id/ID_line3"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/pick_up_elevator_Text" />
+
+
+                <TextView
+                    android:id="@+id/destination_floors_Text"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:text="Destination floor"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line3"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <TextView
+                    android:id="@+id/destination_floors_Text_number"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line3"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <View
+                    android:id="@+id/ID_line4"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/destination_floors_Text" />
+                <TextView
+                    android:id="@+id/destination_elevator_Text"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Destination Elevator"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line4"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <TextView
+                    android:id="@+id/destination_floors_Text_condition"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="19dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line4"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <View
+                    android:id="@+id/ID_line5"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/destination_elevator_Text" />
+                <TextView
+                    android:id="@+id/dateOfArrival_text"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Date of Arrival"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line5"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <TextView
+                    android:id="@+id/dateOfArrival_text_data"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20/43/2022"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line5"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <View
+                    android:id="@+id/ID_line6"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/dateOfArrival_text" />
+
+                <TextView
+                    android:id="@+id/Description_Order_Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Order Specification"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line6"
+                    tools:layout_editor_absoluteX="10dp" />
+                <TextView
+                    android:id="@+id/Description_Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@null"
+                    android:gravity="center"
+
+                    android:hint="Write a description of the size of the car and more details of the parts you want to move"
+                    app:layout_constraintTop_toBottomOf="@+id/Description_Order_Text"
+                    tools:layout_editor_absoluteX="10dp" />
+
+                <View
+                    android:id="@+id/ID_line7"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/Description_Text" />
+
+                <TextView
+                    android:id="@+id/view_picture_text"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="View Picture"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line7"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <ImageButton
+                    android:id="@+id/view_picture_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65dp"
+                    android:background="@drawable/view_text_edit_background"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line7"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:scaleY="1.2"
+                    android:scaleX="1.2"
+
+
+                    app:tint="@color/navParPurple" />
+
+                <View
+                    android:id="@+id/ID_line8"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/view_picture_text" />
+                <View
+                    android:id="@+id/space"
+                    android:layout_width="1.9in"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/ID_line8" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

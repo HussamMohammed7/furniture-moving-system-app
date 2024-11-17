@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/homeFragment"
+        android:iconTint="@color/purple"
+
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item android:title="Order"
+        android:id="@+id/orders"
+        android:iconTint="@color/purple"
+        android:icon="@drawable/ic_baseline_history_24"/>
+    <item android:title="Profile"
+        android:id="@+id/editProfile"
+        android:icon="@drawable/ic_baseline_person_24"/>
+</menu>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/client_theme"
+
+    tools:context=".OTP_send">
+
+    <TextView
+        android:id="@+id/Home_SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Sign up"
+        android:textColor="@color/purple"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintHorizontal_bias="0.2"
+        />
+    <ProgressBar
+        android:id="@+id/progressbar_OTB_Send"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/OTP_text_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTB Verification"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf ="@id/Home_SignUp"
+        app:layout_constraintVertical_bias="0.2"
+        android:textColor="@color/white"
+        android:textSize="34dp"
+        />
+    <TextView
+        android:id="@+id/OTB_text"
+        android:layout_width="2in"
+        android:layout_height="wrap_content"
+
+        android:text="We will send you an One Time Password on this mobile number "
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf ="@id/OTP_text_verify"/>
+    <EditText
+        android:id="@+id/phone_number_SendOTB"
+        android:inputType="phone"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="+966"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/white"
+        android:textColorHint="#EFEDF1"
+        android:textSize="20dp"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf ="@id/OTB_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button_SendOTB"
+        android:layout_width="1in"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:text="Next"
+        android:textColor="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf ="@id/phone_number_SendOTB"/>
+
+
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

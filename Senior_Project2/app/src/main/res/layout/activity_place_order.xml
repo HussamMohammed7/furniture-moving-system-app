@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    >
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Client.PlaceOrder">
+
+
+    <ImageButton
+        android:id="@+id/back_Place_order"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"/>
+    <TextView
+        android:id="@+id/Place_Order_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Place order"
+        android:textColor="@color/purple"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+    <TextView
+        android:id="@+id/Order_Details_Top_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:text="Order Details"
+        android:textSize="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/Place_Order_text" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/order_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Order_Details_Top_text"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Order_Details_text"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Order Details"
+                android:textSize="25dp"
+                android:textColor="@color/redText"
+                android:gravity="center"
+
+
+                />
+            <View
+                android:id="@+id/ID_line1"
+                android:layout_width="1.9in"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/Order_Details_text" />
+
+            <TextView
+                android:id="@+id/How_many_floors_Text"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="How many floors?"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ID_line1"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:id="@+id/dropdown_menu"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ID_line1"
+                app:layout_constraintBottom_toTopOf="@id/ID_line2">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_placeOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Chose number"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/ID_line2"
+                android:layout_width="1.9in"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/dropdown_menu" />
+            <TextView
+                android:lines="2"
+
+
+                android:id="@+id/Is_there_elevator_in_the_pick_up_location_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="1.1in"
+                android:layout_height="match_parent"
+                android:text="Is there elevator in the pick up location?"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/ID_line2"
+                android:layout_marginLeft="20dp"
+                />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_pickUp_location"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ID_line2"
+                app:layout_constraintBottom_toTopOf="@id/ID_line3"
+                android:layout_marginRight="50dp"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track"
+                app:showText="true"
+                android:textOn="Yes"
+                android:textOff="No"
+                />
+
+
+
+            <View
+                android:id="@+id/ID_line3"
+                android:layout_width="1.9in"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/Is_there_elevator_in_the_pick_up_location_text" />
+            <TextView
+                android:id="@+id/Is_there_elevator_in_the_delivery_location_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="1.1in"
+                android:layout_height="match_parent"
+                android:text="Is there elevator in the delivery location?"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/ID_line3"
+                android:layout_marginLeft="20dp"
+                />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_delivery_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ID_line3"
+                app:layout_constraintBottom_toTopOf="@id/ID_line4"
+                android:layout_marginRight="50dp"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track"
+                app:showText="true"
+                android:textOn="Yes"
+                android:textOff="No"
+                />
+
+            <View
+                android:id="@+id/ID_line4"
+                android:layout_width="1.9in"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/Is_there_elevator_in_the_delivery_location_text" />
+
+            <TextView
+                android:id="@+id/Please_upload_pictures_Text"
+                android:layout_width="1.1in"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Upload pictures the furniture if you can"
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/ID_line4"
+                />
+            <ImageButton
+                android:id="@+id/Please_upload_pictures_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_camera_alt_24"
+                app:layout_constraintTop_toBottomOf="@+id/ID_line4"
+                app:layout_constraintBottom_toTopOf="@id/ID_line5"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="65dp"
+
+                />
+
+            <View
+                android:id="@+id/ID_line5"
+                android:layout_width="1.9in"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+
+                app:layout_constraintTop_toBottomOf="@+id/Please_upload_pictures_Text" />
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:id="@+id/Description_Text"
+                android:layout_marginTop="7dp"
+                app:layout_constraintTop_toBottomOf="@+id/ID_line5"
+                android:hint="Write a description of the size of the car and more details of the parts you want to move"
+                android:background="@null"
+                />
+            <View
+                android:id="@+id/line6"
+                android:layout_width="1.9in"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+
+                app:layout_constraintTop_toBottomOf="@+id/Description_Text" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/location_address_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:text="Location address"
+        android:textSize="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/order_card" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/location_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_address_text"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/chose_pick_location_text"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:drawableTint="#008000"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:text="Chose pick up location"
+            android:textSize="19dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
+            android:paddingBottom="15dp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/chose_pick_location_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:background="@color/white"
+            android:layout_marginTop="15dp"
+            android:scaleY="1.2"
+            android:scaleX="1.2"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/redText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/location_destination_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_card"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/chose_destination_location_text"
+                android:layout_marginTop="15dp"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                android:drawableTint="@color/redText"
+                android:drawablePadding="10dp"
+                android:text="Chose Destination location"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="15dp"
+
+                />
+
+            <ImageButton
+                android:id="@+id/chose_pick_Destination_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                android:scaleY="1.2"
+                android:scaleX="1.2"
+                android:src="@drawable/ic_baseline_arrow_forward_24"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/redText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/payment_method_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:text="Payment method"
+        android:textSize="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/location_destination_card" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/payment_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_method_text"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:drawableLeft="@drawable/ic_baseline_credit_card_24"
+                android:drawablePadding="10dp"
+                android:id="@+id/chose_payment_text"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Credit card"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="15dp"
+
+                />
+
+            <TextView
+                android:id="@+id/chose_payment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                android:text="Change"
+                android:textColor="@color/purple"
+
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/redText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/place_order_button"
+        android:layout_width="1in"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_text_edit_background"
+        android:backgroundTint="@color/navParPurple"
+        android:elevation="10dp"
+        android:text="Place The Order"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf ="@id/payment_card"/>
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="1.9in"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+
+        app:layout_constraintTop_toBottomOf="@+id/place_order_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

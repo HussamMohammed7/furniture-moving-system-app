@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/home_Frag">
+    <fragment
+        android:id="@+id/home_Frag"
+        android:name="com.example.senior_project2.Home_Frag"
+        android:label="fragment_home_"
+        tools:layout="@layout/fragment_home_" />
+    <fragment
+        android:id="@+id/edit_Profile_frag"
+        android:name="com.example.senior_project2.Edit_Profile_frag"
+        android:label="fragment_edit__profile_frag"
+        tools:layout="@layout/fragment_edit__profile_frag" />
+    <fragment
+        android:id="@+id/order_frag"
+        android:name="com.example.senior_project2.Order_frag"
+        android:label="fragment_order_frag"
+        tools:layout="@layout/fragment_order_frag" >
+
+        <action
+            android:id="@+id/action_order_frag_to_order_History"
+            app:destination="@id/order_History" />
+    </fragment>
+    <fragment
+        android:id="@+id/order_History"
+        android:name="com.example.senior_project2.Order_History"
+        android:label="fragment_order__history"
+        tools:layout="@layout/fragment_order__history" >
+
+        <action
+            android:id="@+id/action_order_History_to_order_frag"
+            app:destination="@id/order_frag" />
+    </fragment>
+    <action android:id="@+id/action_global_order_frag" app:destination="@id/order_frag" />
+</navigation>
